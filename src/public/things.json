@@ -1,0 +1,8 @@
+{
+    "1":{
+        "title_things":"example",
+        "excel_things":"example.xlsx",
+        "things_erb":"example.erb",
+        "channels_erb":"example.erb"
+    }
+}

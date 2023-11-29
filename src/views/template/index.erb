@@ -1,0 +1,13 @@
+<div class="mb-4">
+  <a class="btn btn-secondary" href="/template/new">ERBを作成</a>
+</div>
+<ul>
+  <% @template.each do |id, post| %>
+    <li>
+      <a class="btn btn-secondary" href="/template/<%= id %>"><%= post["title_template"] %></a>
+    </li>
+  <% end %>
+</ul>
+<div>
+  <a class="btn btn-secondary" href="/">HABitatX</a>
+</div>

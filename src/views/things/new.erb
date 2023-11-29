@@ -1,0 +1,24 @@
+<form action="/things" method="post">
+  <div class="mb-3">
+    <label for="title_things" class="form-label">Things名</label>
+    <input type="text" id="title_things" name="title_things" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="excel_things" class="form-label">Excel</label>
+    <input type="file" id="excel_things" name="excel_things" accept=".xls,.xlsx" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="things_erb" class="form-label">Things</label>
+    <input type="file" id="things_erb" name="things_erb" accept=".erb" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label for="channels_erb" class="form-label">Channels</label>
+    <input type="file" id="channels_erb" name="channels_erb" accept=".erb"class="form-control">
+  </div>
+  <div>
+    <input type="submit" value="保存" class="btn btn-primary">
+  </div>
+</form>
+<div>
+  <a class="btn btn-secondary" href="/things">Things一覧に戻る</a>
+</div>

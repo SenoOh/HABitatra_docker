@@ -1,0 +1,116 @@
+Thing mqtt:topic:MQTTBroker:Doorplate_106 "Doorplate 106" (mqtt:broker:MQTTBroker) [
+    host = "172.23.81.17"
+] {
+    Channels:
+    Type number : plate1 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate1.position",
+        
+        formatBeforePublish = "{\"plate\": 1, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate2 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate2.position",
+        
+        formatBeforePublish = "{\"plate\": 2, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate3 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate3.position",
+        
+        formatBeforePublish = "{\"plate\": 3, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate4 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate4.position",
+        
+        formatBeforePublish = "{\"plate\": 4, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate5 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate5.position",
+        
+        formatBeforePublish = "{\"plate\": 5, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate6 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate6.position",
+        
+        formatBeforePublish = "{\"plate\": 6, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate7 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate7.position",
+        
+        formatBeforePublish = "{\"plate\": 7, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate8 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate8.position",
+        
+        formatBeforePublish = "{\"plate\": 8, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate9 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate9.position",
+        
+        formatBeforePublish = "{\"plate\": 9, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate10 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate10.position",
+        
+        formatBeforePublish = "{\"plate\": 10, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    Type number : plate11 [
+        
+        
+        
+        transformationPattern = "JSONPATH:$.plate11.position",
+        
+        formatBeforePublish = "{\"plate\": 11, \"position\": %s}",
+        commandTopic = "cmd/pinot/v1/ou/eng4/room106/pinot-acdf54/doorplate",
+        stateTopic = "dt/pinot/v1/ou/eng4/room106/+/doorplate"
+    ]
+    
+}
