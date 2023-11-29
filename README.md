@@ -55,11 +55,16 @@ $ sudo systemctl enable openhab.service
 
 起動後，ブラウザ上で http://localhost:8080 を開くと openHAB の画面が開くので各種初期設定を行う
 
+### docker
+ホスト側の`${PWD}/openhab4`をコンテナ側の`/openhab/conf`にマウントさせて起動する
+```
+$ docker run -it -p 8080:8080 -v ${PWD}/openhab4:/openhab/conf --name openhab4 openhab/openhab:4.0.2
+```
+起動後，ブラウザ上で http://localhost:8080 を開くと openHAB の画面が開くので各種初期設定を行う
 
 # Usage
 ## Settings
 + excel/ にスプレッドシートを記述して置く．
-+ template/ に ERB を記述して置く．
 ## Launch
 ### インストール
 1. ダウンロード
