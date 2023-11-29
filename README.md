@@ -11,28 +11,25 @@ HABitatra は，グループホーム向けにスマートホームシステム�
   + https://www.openhab.org/
 
 # Setup
-## openHAB
-### docker
-+ https://www.openhab.org/docs/installation/docker.html
+## openHABをdockerで立ち上げる
++ 以下を参照して立ち上げる
+    + https://www.openhab.org/docs/installation/docker.html
 + ホスト側の`${PWD}/openhab`をコンテナ側の`/openhab/conf`にマウントさせて起動する
 + 起動後，ブラウザ上で http://localhost:8080 を開くと openHAB の画面が開くので各種初期設定を行う
 
-### HABitatra
-#### インストール
+## HABitatra
 1. ダウンロード
-```bash
-$ git clone https://github.com/SenoOh/HABitatra_docker.git
-```
+   ```bash
+   $ git clone https://github.com/SenoOh/HABitatra_docker.git
+   ```
 2. コンテナイメージ作成
-```bash
-$ docker build -t habitatra_docker .
-```
+   ```bash
+   $ docker build -t habitatra_docker .
+   ```
 
-## Launch
-### HABitatra_docker の管理
-#### スクリプトを用いる方法
+# Launch
 + 事前準備
-    1. `launch.sh` の `OPENHAB_CONTAINER_NAME` を自分の openHAB のコンテナ名に変更する
+    + `launch.sh` の `OPENHAB_CONTAINER_NAME` を自分の openHAB のコンテナ名に変更する
 1. 起動
 ```shell
 $ ./launch.sh start
