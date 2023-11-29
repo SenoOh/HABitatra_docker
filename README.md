@@ -1,8 +1,9 @@
 # HABitatra
-本システムは，スマートホームシステムの1つである openHAB のデバイスの管理をサポートするインターフェースである．本システムを用いて openHAB のデバイス設定を担う設定ファイルを一括で作成，変更，削除できる．これによりスマートホームシステムを当該施設で運用する問題点であるデバイスの一括管理の問題を解決する．
+HABitatra は，グループホーム向けにスマートホームシステムである openHAB のデバイスの管理をサポートするインターフェースである．
+本システムは，スマートホームシステムの1つである openHAB のデバイスの管理をサポートするインターフェースである．本システムを用いて openHAB のデバイス設定を担う設定ファイルを一括で作成，変更，削除できる．
 
 "HABitatra"は，"openHAB"，"habitat"，"sinatra" をもとに作られた造語である．
-この名前は，openHAB を表す"HAB"と生息地を表す"habitat"，Ruby のWeb アプリケーションフレームワークである ”sinatra”を組み合わせたものである．HABitatra は，グループホーム向けにスマートホームシステムである openHAB のデバイスの管理をサポートするインターフェースである．
+この名前は，openHAB を表す"HAB"と生息地を表す"habitat"，Ruby の Web アプリケーションフレームワークである ”sinatra”を組み合わせたものである．
 # Requirements
 + Ruby 3.x
 + Java 17.x
@@ -11,56 +12,10 @@
 
 # Setup
 ## openHAB
-### Linux
-まず、openHAB リポジトリキーをパッケージマネージャーに追加する
-```
-$ curl -fsSL "https://openhab.jfrog.io/artifactory/api/gpg/key/public" | gpg --dearmor > openhab.gpg
-$ sudo mkdir /usr/share/keyrings
-```
-
-既に存在している場合がある
-```
-$ sudo mv openhab.gpg /usr/share/keyrings
-$ sudo chmod u=rw,g=r,o=r /usr/share/keyrings/openhab.gpg
-```
-
-openHAB が置いてあるリポジトリを追加する
-
-stable 版
-```
-$ echo 'deb [signed-by=/usr/share/keyrings/openhab.gpg] https://openhab.jfrog.io/artifactory/openhab-linuxpkg stable main' | sudo tee /etc/apt/sources.list.d/openhab.list
-```
-
-test 版
-```
-$ echo 'deb [signed-by=/usr/share/keyrings/openhab.gpg] https://openhab.jfrog.io/artifactory/openhab-linuxpkg testing main' | sudo tee /etc/apt/sources.list.d/openhab.list
-```
-
-apt のパッケージリストを更新後，openHAB をインストール
-```
-$ sudo apt-get update
-$ sudo apt-get install openhab
-```
-
-openHAB のインストール完了後，下記コマンドを実行して openHAB を起動
-```
-$ sudo systemctl start openhab.service
-$ sudo systemctl status openhab.service
-$ sudo systemctl daemon-reload
-$ sudo systemctl enable openhab.service
-```
-
-
-初回起動に約15分かかる
-
-起動後，ブラウザ上で http://localhost:8080 を開くと openHAB の画面が開くので各種初期設定を行う
-
 ### docker
-ホスト側の`${PWD}/openhab4`をコンテナ側の`/openhab/conf`にマウントさせて起動する
-```
-$ docker run -it -p 8080:8080 -v ${PWD}/openhab4:/openhab/conf --name openhab4 openhab/openhab:4.0.2
-```
-起動後，ブラウザ上で http://localhost:8080 を開くと openHAB の画面が開くので各種初期設定を行う
++ https://www.openhab.org/docs/installation/docker.html
++ ホスト側の`${PWD}/openhab`をコンテナ側の`/openhab/conf`にマウントさせて起動する
++ 起動後，ブラウザ上で http://localhost:8080 を開くと openHAB の画面が開くので各種初期設定を行う
 
 # Usage
 ## Settings
